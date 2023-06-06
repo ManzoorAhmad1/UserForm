@@ -31,7 +31,7 @@ setUserAge(event.target.value)
         <input className="userName" value={userName} type="text"onChange={onNameHandler}  />
         <label htmlFor="userAge">Enter your age</label>
         <input className="userAge" value={userAge} type="number" onChange={onAgeHandler}/>
-        <Button type="submit"></Button>
+        <Button type="submit">Add User</Button>
       </form>
     </Card>
   );
