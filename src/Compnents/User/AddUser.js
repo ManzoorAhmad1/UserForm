@@ -1,6 +1,7 @@
 import React,{useState} from "react";
 import Card from "../UI/Card";
 import classes from "./AddUser.module.css";
+import Button from "./Button";
 const AddUser = () => {
 const [userName,setUserName]=useState()
 const [userAge,setUserAge]=useState()
@@ -25,7 +26,7 @@ setUserAge(event.target.value)
         <input className="userName" value={userName} type="text"onChange={onUserName}  />
         <label htmlFor="userAge">Enter your age</label>
         <input className="userAge" value={userAge} type="number" onChange={onUserAge}/>
-        <button type="submit">Add user</button>
+        <Button type="submit"></Button>
       </form>
     </Card>
   );
