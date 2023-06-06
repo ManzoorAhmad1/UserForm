@@ -1,8 +1,9 @@
 import React,{useState} from "react";
 import Card from "../UI/Card";
 import classes from "./AddUser.module.css";
-import Button from "./Button";
-const AddUser = () => {
+import Button from "../UI/Button";
+
+const AddUser = (props) => {
 const [userName,setUserName]=useState("")
 const [userAge,setUserAge]=useState("")
 
@@ -13,8 +14,8 @@ const [userAge,setUserAge]=useState("")
     if(userName.trim().length === 0 || userAge.trim().length === 0){
       return ;
     }
-    if(userAge >1){console.log("enter a valid number")}
-    console.log(userName,userAge)
+    if(userAge <1){return;}
+    props.onSaveUserList(userName,userAge);
   };
   const onNameHandler=(event)=>{
 setUserName(event.target.value)
