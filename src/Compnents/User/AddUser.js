@@ -1,9 +1,11 @@
 import React from "react";
-
+import Card from "../UI/Card"
 const AddUser =()=>{
-    const onAddSubmitHandler=(event)=>{}
+    const onAddSubmitHandler=(event)=>{
+     event.preventDefault();
+    }
     return(
-     <div>
+     <Card>
         <form onSubmit={onAddSubmitHandler}>
         <label htmlFor="userName">Enter your userName</label>
             <input className="userName" type="text"/> 
@@ -11,7 +13,7 @@ const AddUser =()=>{
             <input className="userAge" type="number"/>
             <button type="submit">Add user</button> 
         </form>
-     </div>
+     </Card>
     )
 }
 export default AddUser;
