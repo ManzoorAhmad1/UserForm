@@ -5,7 +5,7 @@ import Button from "../UI/Button"
 
 const errorCard=(props)=>{
  return(
-    <div className={classes.backdrop}>
+    <div className={classes.backdrop} onClick={props.onConfirm}>
     <Card className={classes.modal}>
         <header className={classes.header}>
             <h1>{props.title}</h1>
@@ -14,7 +14,7 @@ const errorCard=(props)=>{
             <h2>{props.message}</h2>
         </div>
         <footer className={classes.actions}>
-            <Button>OKAY</Button>
+            <Button onClick={props.onConfirm}>OKAY</Button>
         </footer>
     </Card>
     </div>
